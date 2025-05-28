@@ -5,7 +5,7 @@ const port = 3000;
 const mongoose = require('mongoose');
 
 // Conexión a MongoDB (usa la IP de la VM con Mongo)
-mongoose.connect('mongodb://172.20.10.2:27017/ip-test').then(() => console.log('MongoDB conectado'))
+mongoose.connect('mongodb://dbm.liceth.lab:27017/ip-test').then(() => console.log('MongoDB conectado'))
   .catch(err => console.error('Error de conexión:', err));
 
 
