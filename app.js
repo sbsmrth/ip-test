@@ -4,18 +4,15 @@ const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
 
-/*
 // Conexión a MongoDB (usa la IP de la VM con Mongo)
-mongoose.connect('mongodb://127.0.0.1/ip-test').then(() => console.log('MongoDB conectado'))
+mongoose.connect('mongodb://172.20.10.2:27017/ip-test').then(() => console.log('MongoDB conectado'))
   .catch(err => console.error('Error de conexión:', err));
 
-*/
 
 app.set('trust proxy', true); // Necesario si estás detrás de un proxy (Heroku, Nginx, etc.)
 
 // Root get production
 
-/*
 app.get('/', async (req, res) => {
   let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   if (ip.includes(',')) ip = ip.split(',')[0].trim();
@@ -110,10 +107,10 @@ app.get('/', async (req, res) => {
     return res.status(500).send('Error del servidor');
   }
 });
-*/
 
 // Root get development
 
+/*
 app.get('/', async (req, res) => {
   let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   if (ip.includes(',')) ip = ip.split(',')[0].trim();
@@ -197,7 +194,7 @@ app.get('/', async (req, res) => {
 
   return res.send(html);
 });
-
+*/
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
