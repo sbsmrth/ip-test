@@ -88,6 +88,6 @@ app.get('/', (req, res) => {
   return res.send(html);
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });
