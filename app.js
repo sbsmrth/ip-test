@@ -92,7 +92,7 @@ app.get('/', async (req, res) => {
       </head>
       <body>
         <div class="card">
-          <h1>Tu dirección IP pública es:</h1>
+          <h1>Tu dirección IP es:</h1>
           <p>${ip}</p>
           <h2>Número de visitas:</h2>
           <p>${view.count}</p>
