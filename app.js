@@ -1,7 +1,7 @@
 const express = require('express');
 const View = require('./models/View');
 const app = express();
-const port = 3000;
+const port = 80;
 const mongoose = require('mongoose');
 
 // Conexión a MongoDB (usa la IP de la VM con Mongo)
